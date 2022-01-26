@@ -17,6 +17,7 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -88,6 +89,21 @@ public class PirateGameEvents implements Listener {
             // Open shop GUI
             event.setCancelled(true);
             event.getPlayer().openInventory(gui.getInventory());
+        }
+    }
+
+    @EventHandler
+    public void onBlockBreak(BlockBreakEvent event) {
+        Player player = event.getPlayer();
+
+        // Check if block is Gold Ore
+        if(event.getBlock().getType().equals(Material.GOLD_ORE)){
+            // Create the ItemStack to give to player
+            ItemStack vCoins = new ItemStack(ItemManager.Coin.getType(), 3);
+            vCoins.setItemMeta(ItemManager.Coin.getItemMeta());
+            // If it give the player 3 V-Coins and cancle item drop
+            event.setDropItems(false);
+            player.getInventory().addItem(vCoins);
         }
     }
 
