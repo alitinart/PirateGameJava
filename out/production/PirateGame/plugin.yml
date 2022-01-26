@@ -1,0 +1,9 @@
+name: PirateGame
+version: 1.0
+author: Alpha
+main: com.alpha.pirategame.PirateGame
+api-version: 1.18
+commands:
+  getshopspawner:
+    description: Get Shop Spawner
+    usage: /<command>

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PirateGame:jar">
+    <output-path>$PROJECT_DIR$/../Minecraft Testing Server/plugins</output-path>
+    <root id="archive" name="PirateGame.jar">
+      <element id="module-output" name="PirateGame" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Dependecies/spigot-api-1.18.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Dependecies/worldedit-bukkit-7.2.8.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
