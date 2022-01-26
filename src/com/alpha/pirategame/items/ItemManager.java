@@ -70,6 +70,7 @@ public class ItemManager {
         List<String> lore = new ArrayList<String>();
         lore.add("Shooting this might send you back...");
         meta.setLore(lore);
+        meta.setUnbreakable(true);
         meta.setCustomModelData(1);
 
         /* Set Meta */
@@ -152,6 +153,7 @@ public class ItemManager {
         List<String> lore = new ArrayList<>();
         lore.add("§7CAUTION: Very Sharp");
         meta.setLore(lore);
+        meta.setUnbreakable(true);
         meta.setDisplayName("§cPirate Sword");
         meta.setUnbreakable(true);
         meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
